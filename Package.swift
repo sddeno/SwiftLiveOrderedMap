@@ -6,16 +6,13 @@ import PackageDescription
 let package = Package(
     name: "SwiftLiveOrderedMap",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "SwiftLiveOrderedMap",
-            targets: ["SwiftLiveOrderedMap"]),
+        .library(name: "SwiftLiveOrderedMap", targets: ["SwiftLiveOrderedMap"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "SwiftLiveOrderedMap"),
-
+        .target(name: "SwiftLiveOrderedMap"),
+        .testTarget(
+            name: "SwiftLiveOrderedMapTests",
+            dependencies: ["SwiftLiveOrderedMap"]
+        ),
     ]
 )

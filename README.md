@@ -32,3 +32,6 @@ map["apple"] = 10
 map["banana"] = 20
 print(map["apple"]) // Optional(10)
 print(map.count)    // 2
+
+
+[![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)

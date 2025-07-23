@@ -1,18 +1,18 @@
-// swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
-    name: "SwiftLiveOrderedMap",
-    products: [
-        .library(name: "SwiftLiveOrderedMap", targets: ["SwiftLiveOrderedMap"]),
+    name: "MyProject",
+    platforms: [.macOS(.v12), .iOS(.v14)],
+    dependencies: [
+        .package(url: "https://github.com/sddeno/SwiftLiveOrderedMap.git", from: "1.0.0")
     ],
     targets: [
-        .target(name: "SwiftLiveOrderedMap"),
-        .testTarget(
-            name: "SwiftLiveOrderedMapTests",
-            dependencies: ["SwiftLiveOrderedMap"]
-        ),
+        .target(
+            name: "MyProject",
+            dependencies: [
+                .product(name: "SwiftLiveOrderedMap", package: "SwiftLiveOrderedMap")
+            ]
+        )
     ]
 )

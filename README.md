@@ -23,3 +23,12 @@ Use the **Swift Package Manager** to add it to your project:
 ```swift
 .package(url: "https://github.com/sddeno/SwiftLiveOrderedMap.git", from: "1.0.0")
 
+![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)
+![Platform](https://img.shields.io/badge/platform-macos%20%7C%20ios%20%7C%20watchos%20%7C%20tvos-lightgrey)
+![License](https://img.shields.io/github/license/sddeno/SwiftLiveOrderedMap)
+
+var map = SwiftLiveOrderedMap<String, Int>()
+map["apple"] = 10
+map["banana"] = 20
+print(map["apple"]) // Optional(10)
+print(map.count)    // 2
